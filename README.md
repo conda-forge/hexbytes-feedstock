@@ -1,11 +1,11 @@
-About hexbytes
-==============
+About hexbytes-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/hexbytes-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/ethereum/hexbytes
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/hexbytes-feedstock/blob/main/LICENSE.txt)
 
 Summary: hexbytes: Python `bytes` subclass that decodes hex, with a readable console output
 

@@ -1,5 +1,5 @@
 {% set name = "hexbytes" %}
-{% set version = "0.3.1" %}
+{% set version = "1.0.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a3fe35c6831ee8fafd048c4c086b986075fc14fd46258fa24ecb8d65745f9a9d
+  sha256: 18e6e3279a13878b93fb85da77822dc506b7048065a588e74141c2468a65ad8c
 
 build:
   number: 0
@@ -18,9 +18,9 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6,<4.0
+    - python >=3.8,<4.0
   run:
-    - python >=3.6,<4.0
+    - python >=3.8,<4.0
 
 test:
   imports:

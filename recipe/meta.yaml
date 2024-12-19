@@ -7,20 +7,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 515f00dddf31053db4d0d7636dd16061c1d896c3109b8e751005db4ca46bcca7
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
+    - setuptools
     - pip
-    - python >=3.8,<4.0
+    - python {{ python_min }}
   run:
-    - python >=3.8,<4.0
+    - python >={{ python_min }},<4.0
 
 test:
   imports:
@@ -29,6 +30,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/ethereum/hexbytes

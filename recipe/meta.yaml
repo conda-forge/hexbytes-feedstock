@@ -14,16 +14,15 @@ build:
   number: 1
   noarch: python
   script:
-    env:
-      SETUPTOOLS_SCM_PRETEND_VERSION: {{ version }}
-    content: {{ PYTHON }} -m pip install . -vv
+    - export SETUPTOOLS_SCM_PRETEND_VERSION="{{ version }}"
+    - {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - setuptools
     - setuptools-scm
     - pip
-    - python {{ python_min }}
+    - python >={{ python_min }}
   run:
     - python >={{ python_min }},<4.0
 

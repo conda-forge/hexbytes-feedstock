@@ -11,9 +11,12 @@ source:
   sha256: 01312fcd5c57e8a8d2d7dd3274dcf84ea50422aff2abcc2d9fd89ad6a32498e5
 
 build:
-  number: 0
+  number: 1
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script:
+    env:
+      SETUPTOOLS_SCM_PRETEND_VERSION: {{ version }}
+    content: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:

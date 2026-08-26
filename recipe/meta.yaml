@@ -11,7 +11,7 @@ source:
   sha256: 01312fcd5c57e8a8d2d7dd3274dcf84ea50422aff2abcc2d9fd89ad6a32498e5
 
 build:
-  number: 1
+  number: 2
   noarch: python
   script:
     - export SETUPTOOLS_SCM_PRETEND_VERSION="{{ version }}"
@@ -22,7 +22,7 @@ requirements:
     - setuptools
     - setuptools-scm
     - pip
-    - python >={{ python_min }}
+    - python {{ python_min }}
   run:
     - python >={{ python_min }},<4.0
 

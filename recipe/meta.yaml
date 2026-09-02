@@ -16,6 +16,8 @@ build:
   script:
     - export SETUPTOOLS_SCM_PRETEND_VERSION="{{ version }}"
     - {{ PYTHON }} -m pip install . -vv
+    - rm -rf ${SP_DIR}/docs   # [unix]
+    - rmdir /s /q %SP_DIR%\docs   # [win]
 
 requirements:
   host:
